@@ -11,6 +11,16 @@
     <div class="content">
       {{ .Content }}
     </div>
+
+    {{ if not .Params.notoc }}
+    {{ if .TableOfContents }}
+    <div class="article-toc" {{ if .Site.Params.SmartToc }}style="display:none;"{{ end }}>
+        <h3>Contents</h3>
+        {{ .TableOfContents }}
+    </div>
+    {{ end }}
+    {{ end }}
+
     {{ if (ne ($.Param "sharingicons") false) }}
     {{ partial "sharing.html" . }}
     {{ end }}
