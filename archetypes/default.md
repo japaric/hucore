@@ -1,7 +1,7 @@
 +++
-description = ""
-categories = ["category"]
-tags = ["tag1", "tag2"]
+author = "John Smith"
+date = {{ .Date }}
 draft = true
-author = ""
+tags = ["a", "b", "c"]
+title = "{{ replace .TranslationBaseName "-" " " | title }}"
 +++
