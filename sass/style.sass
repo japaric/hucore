@@ -5,6 +5,29 @@ $family-sans-serif: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hira
 
 @import "node_modules/bulma/bulma"
 
+.grid
+  align-items: center
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: center
+
+.cell
+  margin: 1rem;
+  @media screen and (min-width: 600px)
+    width: calc(50% - 2rem);
+  @media screen and (min-width: 800px)
+    width: calc(100% / 3 - 2rem);
+
+.cell img
+  margin: auto;
+  display: block;
+  max-width: 200px;
+  max-height: 120px;
+
+.image
+  max-width: 100%
+
 .container
   max-width: 800px
   margin: 0 auto
